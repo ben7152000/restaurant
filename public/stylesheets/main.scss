@@ -1,0 +1,538 @@
+// 字型
+@import url('https://fonts.googleapis.com/css2?family=Sofia&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&family=Sofia&display=swap');
+
+// 顏色
+$primary-color: #c5aa78;
+$text-color: #bebebe;
+
+// 一般設定
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+body {
+  background-color: #000;
+}
+
+a {
+  text-decoration: none;
+}
+
+// header
+#header {
+  width: 100%;
+  background-color: #000;
+  border-bottom: 10px solid $primary-color;
+
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .logo {
+      position: absolute;
+      font: {
+        size: 4rem;
+        weight: 900;
+        family: 'Sofia';
+      }
+      color: $primary-color;
+      letter-spacing: 1px;
+    }
+  
+    .nav {
+      margin-top: 20px;
+      a {
+        font: {
+          size: 1.2rem;
+          weight: 700;
+        }
+        position: relative;
+        color: $text-color;
+        letter-spacing: .5px;
+        padding: 10px 25px;
+        cursor: pointer;
+        transition: color .5s;
+  
+        &:hover {
+          color: $primary-color;
+  
+          &:after {
+            bottom: 3%;
+            opacity: 1;
+          }
+        }
+  
+        &:after {
+          content: '';
+          width: 24px;
+          height: 4px;
+          background-color: $primary-color;
+          position: absolute;
+          bottom: -10%;
+          left: 41%;
+          opacity: 0;
+          transition: .5s;
+        }
+      }
+      :nth-child(3) {
+        margin-left: 500px;
+      }
+    }
+  
+    .socal-media {
+      position: absolute;
+      top: 8%;
+      right: 10%;
+      color: $primary-color;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 150px;
+      height: 50px;
+      
+      a {
+        color: $primary-color;
+
+        .fab {
+          font: {
+            size: 1.1rem;
+            weight: 500;
+          }
+          width: 25px;
+          height: 25px;
+          text-align: center;
+          line-height: 25px;
+          cursor: pointer;
+          transform: translateY(0%);
+          transition: all .5s;
+    
+          &:hover {
+            color: $text-color;
+            transform: translateY(-10%);
+          }
+        }
+      }
+      
+      .blog {
+        font: {
+          size: 1.1rem;
+          weight: 500;
+        }
+        width: 45px;
+        height: 25px;
+        text-align: center;
+        line-height: 25px;
+        cursor: pointer;
+        transform: translateY(0%);
+        transition: all .5s;
+  
+        &:hover {
+          color: $text-color;
+          transform: translateY(-10%);
+        }
+      }
+      
+    }
+  }
+}
+// header end
+
+// banner
+.banner {
+  .swiper-container {
+    width: 100%;
+    height: 100%;
+
+    .swiper-wrapper {
+      .swiper-slide {
+        height: 80vh;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+
+    .swiper-button-next, 
+    .swiper-button-prev {
+      color: #333;
+      font-weight: 900;
+      background-color: #666;
+      width: 40px;
+      height: 50px;
+      border-radius: 20px;
+      transition: 0.5s ease-in-out;
+
+      &:hover {
+        color: $primary-color;
+        background-color: #000;
+      }
+
+      &:focus {
+        border: none;
+      }
+    }
+
+  }
+}
+// banner end
+
+// search bar
+.search {
+  width: 100%;
+  max-width: 600px;
+  height: 110px;
+  margin: 50px auto;
+  background-color: #333;
+  border-radius: 20px;
+
+  .container {
+    h4 {
+      font: {
+        size: 1.8rem;
+        weight: 300;
+      }
+      color: $primary-color;
+      letter-spacing: .5px;
+      padding: 15px 0 5px 32px;
+    }
+
+    .input {
+      display: flex;
+      align-items: center;
+      padding-left: 30px;
+
+      input {
+        width: 500px;
+        height: 35px;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        padding-left: 10px;
+        line-height: 1.6;
+        background-color: #ccc;
+        transition: .3s;
+
+        &:hover {
+          background-color: #fff;
+        }
+
+        &:focus {
+          border: none;
+          outline: none;
+        }
+      }
+
+      button {
+        font: {
+          size: 1.2rem;
+        }
+        width: 35px;
+        height: 35px;
+        text-align: center;
+        line-height: 35px;
+        margin-left: 5px;
+        color: #333;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        background-color: #ccc;
+        transition: .5s;
+
+        &:hover {
+          color: $primary-color;
+          background-color: #000;
+        }
+      }
+
+    }
+  }
+}
+// search bar end
+
+// restaurant list
+.list {
+  display: flex;
+  justify-content: center;
+
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 50px 50px;
+
+    .restaurants-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      
+      .restaurant {
+        width: 22%;
+        margin: 0 10px 30px 10px;
+        
+        .pic {
+          width: 100%;
+          overflow: hidden;
+
+          a {
+            img {
+              width: 100%;
+              height: 200px;
+              vertical-align: middle;
+              transform: scale(1);
+              transition: .5s;
+    
+              &:hover {
+                transform: scale(1.1);
+              }
+            }
+          }
+        }
+        
+        .text {
+          padding: 10px 0 10px 10px;
+          background-color: #ccc;
+
+          .title {
+            font: {
+              size: 1rem;
+              weight: 700;
+            }
+            color: #333;
+            letter-spacing: .5px;
+            margin-bottom: 5px;
+          }
+
+          .subtitle {
+            font: {
+              size: .9rem;
+              weight: 500;
+            }
+            color: #333;
+            margin-bottom: 5px;
+
+            i {
+              margin-right: 5px;
+            }
+          }
+
+          .heart {
+            border-radius: 10px;
+            background-color: red;
+            width: 60px;
+            height: 20px;
+            text-align: center;
+
+            font: {
+              size: .7rem;
+              weight: 500;
+            }
+            color: #fff;
+            line-height: 20px;
+
+            i {
+              margin-left: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// restaurant list end
+
+// footer
+#footer {
+  width: 100%;
+  background-color: #222;
+  border-top: 10px solid $primary-color;
+
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    height: 220px;
+    position: relative;
+
+    .logo {
+      position: absolute;
+      font: {
+        size: 5rem;
+        weight: 900;
+        family: 'Sofia';
+      }
+      color: $primary-color;
+      letter-spacing: 1px;
+      opacity: .6;
+      bottom: 18%;
+      right: 0%;
+    }
+
+    .socal-media {
+      position: absolute;
+      color: #333;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 250px;
+      height: 50px;
+      bottom: 43%;
+      left: 20%;
+
+      a {
+        color: #333;
+
+        .fab {
+          font: {
+            size: 2rem;
+            weight: 500;
+          }
+          width: 56px;
+          height: 56px;
+          background-color: $primary-color;
+          border-radius: 50%;
+          text-align: center;
+          line-height: 56px;
+          cursor: pointer;
+          transform: translateY(0%);
+          transition: all .5s;
+    
+          &:hover {
+            color: $text-color;
+            background-color: #333;
+            transform: translateY(-10%);
+          }
+        }
+      }
+  
+      .blog {
+        font: {
+          size: 1.2rem;
+          weight: 900;
+        }
+        width: 56px;
+        height: 56px;
+        background-color: $primary-color;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 56px;
+        cursor: pointer;
+        transform: translateY(0%);
+        transition: all .5s;
+  
+        &:hover {
+          color: $text-color;
+          background-color: #333;
+          transform: translateY(-10%);
+        }
+      }
+    }
+
+    .copyright {
+      font: {
+        size: .9rem;
+        weight: 300;
+      }
+      color: $text-color;
+      letter-spacing: 1px;
+      position: absolute;
+      bottom: 24%;
+      left: 20%;
+    }
+
+  }
+}
+// footer end
+
+// detail
+.detail {
+  .title {
+    font: {
+      size: 3rem;
+      weight: 500;
+    }
+    opacity: .8;
+    width: 100%;
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+    color: $primary-color;
+    background-color: #333;
+    border-radius: 50px;
+    letter-spacing: 1px;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 50px auto;
+
+    .pic {
+      img {
+        width: 600px;
+        vertical-align: middle;
+      }
+    }
+
+    .text {
+      width: 600px;
+      background-color: #ccc;
+      margin: 30px;
+      padding: 20px 30px;
+      border-radius: 10px;
+
+      p {
+        font: {
+          size: 1rem;
+          weight: 300;
+        }
+        color: #333;
+        line-height: 1.6;
+        letter-spacing: .5px;
+
+        span {
+          font: {
+            size: 1rem;
+            weight: 500;
+          }
+          color: #555;
+          line-height: 1.6;
+          text-align: center;
+  
+          i {
+              padding-right: 5px;
+            }
+          }
+
+          .map {
+            margin-left: 5px;
+            color: #333;
+            transition: .5s;
+
+            &:hover {
+              color: $primary-color;
+            }
+          }
+        }
+      }
+
+      .description {
+        margin-top: 10px;
+        padding: 5px;
+      }
+    
+  }
+}
+// detail end

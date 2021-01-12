@@ -1,0 +1,39 @@
+  <!-- detail -->
+  <div class="detail">
+    <h2 class="title">{{ restaurant.name }}</h2>
+    <div class="container">
+      <div class="pic">
+        <img src="{{ restaurant.image }}" alt="{{ restaurant.name }}">
+      </div>
+      <div class="text">
+        <p>
+          <span>
+            <i class="fas fa-utensils"></i>
+            類別：
+          </span>
+          {{ restaurant.category }}
+        </p>
+        <p>
+          <span>
+            <i class="fas fa-map-marker-alt"></i>
+            地址：
+          </span>
+          {{ restaurant.location }}
+          <a href="{{ restaurant.google_map }}" target="_blank">
+            <i class="fas fa-location-arrow map"></i>
+          </a>
+        </p>
+        <p>
+          <span>
+            <i class="fas fa-mobile-alt"></i>
+            電話：
+          </span>
+          {{ restaurant.phone }}
+        </p>
+        <p class="description">
+          {{ restaurant.description }}
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- detail end -->

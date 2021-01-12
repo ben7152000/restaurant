@@ -1,0 +1,61 @@
+<!-- banner -->
+<div class="banner">
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" style="background-image:url(/image/banner-1.png)"></div>
+      <div class="swiper-slide" style="background-image:url(/image/banner-2.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(/image/banner-3.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(/image/banner-4.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(/image/banner-5.jpg)"></div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+</div>
+<!-- banner end -->
+
+<!-- search bar -->
+  <div class="search">
+    <div class="container">
+      <form action="/search">
+        <h4>尋找餐廳：</h4>
+        <div class="input">
+          <input type="text" name="keyword" placeholder="輸入餐廳、分類" aria-label="Restaurant Name..." value="{{ keyword }}" aria-describedby="search-button">
+          <button type="submit" id="search-button"><i class="fas fa-search"></i></button>
+        </div>
+      </form>
+    </div>
+  </div>
+<!-- search bar end -->
+
+<!-- restaurant list -->
+  <div class="list">
+    <div class="container">
+      <div class="restaurants-group">
+
+
+        {{#each restaurants}}
+        <div class="restaurant">
+          <div class="pic">
+            <a href="/detail/{{ this.id }}">
+              <img src="{{ this.image }}" alt="{{ this.name }}"></a>
+          </div>
+          <div class="text">
+            <h6 class="title">{{ this.name }}</h6>
+            <div class="subtitle">
+              <i class="fas fa-utensils"></i>
+              {{ this.category }}
+            </div>
+            <div class="heart">
+              {{ this.rating }}
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        {{/each}}
+
+
+      </div>
+    </div>
+  </div>
+  <!-- restaurant list end -->
