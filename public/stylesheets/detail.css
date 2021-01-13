@@ -151,203 +151,6 @@ a {
           transform: translateY(-10%);
 }
 
-.banner .swiper-container {
-  width: 100%;
-  height: 100%;
-}
-
-.banner .swiper-container .swiper-wrapper .swiper-slide {
-  height: 80vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.banner .swiper-container .swiper-button-next,
-.banner .swiper-container .swiper-button-prev {
-  color: #333;
-  font-weight: 900;
-  background-color: #666;
-  width: 40px;
-  height: 50px;
-  border-radius: 20px;
-  -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
-}
-
-.banner .swiper-container .swiper-button-next:hover,
-.banner .swiper-container .swiper-button-prev:hover {
-  color: #c5aa78;
-  background-color: #000;
-}
-
-.banner .swiper-container .swiper-button-next:focus,
-.banner .swiper-container .swiper-button-prev:focus {
-  border: none;
-}
-
-.search {
-  width: 100%;
-  max-width: 600px;
-  height: 110px;
-  margin: 50px auto;
-  background-color: #333;
-  border-radius: 20px;
-}
-
-.search .container h4 {
-  font-size: 1.8rem;
-  font-weight: 300;
-  color: #c5aa78;
-  letter-spacing: .5px;
-  padding: 15px 0 5px 32px;
-}
-
-.search .container .input {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-left: 30px;
-}
-
-.search .container .input input {
-  width: 500px;
-  height: 35px;
-  border-radius: 10px;
-  border: none;
-  outline: none;
-  padding-left: 10px;
-  line-height: 1.6;
-  background-color: #ccc;
-  -webkit-transition: .3s;
-  transition: .3s;
-}
-
-.search .container .input input:hover {
-  background-color: #fff;
-}
-
-.search .container .input input:focus {
-  border: none;
-  outline: none;
-}
-
-.search .container .input button {
-  font-size: 1.2rem;
-  width: 35px;
-  height: 35px;
-  text-align: center;
-  line-height: 35px;
-  margin-left: 5px;
-  color: #333;
-  border-radius: 5px;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  background-color: #ccc;
-  -webkit-transition: .5s;
-  transition: .5s;
-}
-
-.search .container .input button:hover {
-  color: #c5aa78;
-  background-color: #000;
-}
-
-.list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.list .container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 50px 50px;
-}
-
-.list .container .restaurants-group {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.list .container .restaurants-group .restaurant {
-  width: 22%;
-  margin: 0 10px 30px 10px;
-}
-
-.list .container .restaurants-group .restaurant .pic {
-  width: 100%;
-  overflow: hidden;
-}
-
-.list .container .restaurants-group .restaurant .pic a img {
-  width: 100%;
-  height: 200px;
-  vertical-align: middle;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition: .5s;
-  transition: .5s;
-}
-
-.list .container .restaurants-group .restaurant .pic a img:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-
-.list .container .restaurants-group .restaurant .text {
-  padding: 10px 0 10px 10px;
-  background-color: #ccc;
-}
-
-.list .container .restaurants-group .restaurant .text .title {
-  font-size: 1rem;
-  font-weight: 700;
-  color: #333;
-  letter-spacing: .5px;
-  margin-bottom: 5px;
-}
-
-.list .container .restaurants-group .restaurant .text .subtitle {
-  font-size: .9rem;
-  font-weight: 500;
-  color: #333;
-  margin-bottom: 5px;
-}
-
-.list .container .restaurants-group .restaurant .text .subtitle i {
-  margin-right: 5px;
-}
-
-.list .container .restaurants-group .restaurant .text .heart {
-  border-radius: 10px;
-  background-color: red;
-  width: 60px;
-  height: 20px;
-  text-align: center;
-  font-size: .7rem;
-  font-weight: 500;
-  color: #fff;
-  line-height: 20px;
-}
-
-.list .container .restaurants-group .restaurant .text .heart i {
-  margin-left: 5px;
-}
-
 #footer {
   width: 100%;
   background-color: #222;
@@ -530,5 +333,39 @@ a {
 .detail .container .description {
   margin-top: 10px;
   padding: 5px;
+}
+
+.back {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: -20px;
+  margin-bottom: 50px;
+}
+
+.back a {
+  font-size: 1.1rem;
+  font-weight: 900;
+  color: #333;
+  background-color: #c5aa78;
+  width: 56px;
+  height: 56px;
+  line-height: 56px;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.back a:hover {
+  color: #bebebe;
+  background-color: #333;
 }
 /*# sourceMappingURL=detail.css.map */

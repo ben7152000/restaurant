@@ -83,4 +83,35 @@
     
   }
 }
+
+.back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -20px;
+  margin-bottom: 50px;
+
+  a {
+    font: {
+      size: 1.1rem;
+      weight: 900;
+    }
+    color: #333;
+    background-color: $primary-color;
+    width: 56px;
+    height: 56px;
+    line-height: 56px;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    transition: .5s;
+
+    &:hover {
+      color: $text-color;
+      background-color: #333;
+    }
+  }
+
+}
+
 // detail end

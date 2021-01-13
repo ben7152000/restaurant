@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Sofia&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&family=Sofia&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -411,6 +413,7 @@ a {
 .list .container .restaurants-group .restaurant .text {
   padding: 10px 0 10px 10px;
   background-color: #ccc;
+  position: relative;
 }
 
 .list .container .restaurants-group .restaurant .text .title {
@@ -446,5 +449,21 @@ a {
 
 .list .container .restaurants-group .restaurant .text .heart i {
   margin-left: 5px;
+}
+
+.list .container .restaurants-group .restaurant .text .map {
+  position: absolute;
+  right: 7%;
+  bottom: 13%;
+}
+
+.list .container .restaurants-group .restaurant .text .map a {
+  color: #333;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.list .container .restaurants-group .restaurant .text .map a:hover {
+  color: #c5aa78;
 }
 /*# sourceMappingURL=index.css.map */
