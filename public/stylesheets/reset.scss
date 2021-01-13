@@ -1,0 +1,19 @@
+// 字型
+@import url('https://fonts.googleapis.com/css2?family=Sofia&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&family=Sofia&display=swap');
+
+// 一般設定
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+body {
+  background-color: #000;
+}
+
+a {
+  text-decoration: none;
+}
