@@ -4,9 +4,10 @@ const restaurants = require('../../restaurant')
 
 router.get('/', (req, res) => {
   const keyword = req.query.keyword
-  const restaurant = restaurants.results.filter(restaurant => {
-    return restaurant.name.toLowerCase().includes(keyword.toLowerCase())
+  const restaurant = restaurants.results.filter(item => {
+    return item.name.toLowerCase().includes(keyword.toLowerCase()) || item.category.includes(keyword) || item
   })
+
   res.render('index', { restaurant, keyword })
 })
 
